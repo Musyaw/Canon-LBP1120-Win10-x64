@@ -1,6 +1,6 @@
-# Canon LBP-1120 на Windows 10 x64
+# Драйвер Canon LBP-1120 для Windows 10 и Windows 11 (64 бит)
 
-Печать на **Canon Laser Shot LBP-1120** из 64-битной Windows без виртуальной машины.
+Печать на **Canon Laser Shot LBP-1120** (LBP1120) из 64-битной Windows без виртуальной машины.
 
 Официального драйвера CAPT под Windows x64 нет. Эта сборка ставит свой сервер печати: принтер один раз переводится на WinUSB, дальше документы уходят через обычный Ctrl+P.
 
@@ -46,3 +46,11 @@ ISCC installer\CaptWinSetup.iss
 Свой код (captwin, установщик, скрипты настройки) — [MIT](LICENSE).
 
 Чужие части остаются под своими лицензиями, список в `release\LICENSES.txt`: libcapt и captppd (BSD 2-Clause), libusb (LGPL-2.1), Zadig (GPL-3), Ghostscript (AGPL-3). Сборка не является драйвером Canon.
+
+## Если искали драйвер
+
+Эту страницу находят по запросам: драйвер Canon LBP-1120 Windows 10 64 bit, драйвер Canon LBP-1120 Windows 11 x64, Canon Laser Shot LBP1120 нет драйвера, CAPT driver LBP-1120 Windows 10 x64. Официального драйвера Canon под 64-битную Windows нет. Здесь рабочая замена: установщик, WinUSB и печать через Ctrl+P. Проверено на Windows 10 x64 и Windows 11 x64.
+
+## Контакт
+
+Сделал Musyaw. Написать в Telegram: [@bytebin](https://t.me/bytebin)
