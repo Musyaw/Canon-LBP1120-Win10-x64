@@ -1,33 +1,46 @@
-# Canon LBP-1120 на Windows 10 x64 (CAPT, captwin)
+# Canon LBP-1120 на Windows 10 x64
 
-Рабочая сборка: **1.1.22**. Готовый установщик лежит рядом, в папке `01-установщик` (на GitHub его лучше прикрепить к **Release**, а не коммитить в историю).
+Печать на **Canon Laser Shot LBP-1120** из 64-битной Windows без виртуальной машины.
 
-Официального драйвера Canon CAPT для 64-битной Windows нет. Здесь свой сервер печати: USB через WinUSB (Zadig), очередь Windows, Ghostscript, печать по Ctrl+P.
+Официального драйвера CAPT под Windows x64 нет. Эта сборка ставит свой сервер печати: принтер один раз переводится на WinUSB, дальше документы уходят через обычный Ctrl+P.
 
-Проверено на Windows 10 x64, принтер Canon Laser Shot LBP-1120 (USB `04A9:262B`).
+Проверено на Windows 10 x64, USB `04A9:262B`. Это не продукт Canon.
 
-## Что внутри
+**Установщик 1.1.22:** [скачать](https://github.com/Musyaw/Canon-LBP1120-Win10-x64/releases/tag/v1.1.22)
 
-| Папка | Зачем |
-|---|---|
-| `captwin` | программа сервера (`captwin.exe`) |
-| `installer` | скрипты GUI, мастер, Inno Setup (`CaptWinSetup.iss`) |
-| `libcapt` | протокол CAPT |
-| `third_party/ghostscript` | Ghostscript, который кладётся в установщик |
-| `tools/zadig` | Zadig для WinUSB |
-| `release` | распакованный комплект последней сборки |
+## Как печатать
 
-Сборка установщика (нужны MinGW в `C:\mingw64` и Inno Setup 6):
+1. Подключите принтер по USB и включите его.
+2. Запустите `Canon-LBP1120-CAPT-Setup-1.1.22.exe` от имени администратора.
+3. На рабочем столе откройте **«LBP-1120 — быстрый запуск»**.
+4. В мастере нажмите **«Открыть Zadig»**. Выберите Canon (`VID 04A9`, `PID 262B`), драйвер **WinUSB**, затем **Replace Driver**. Драйвер «Поддержка USB принтера» (`usbprint`) для этой программы не подходит.
+5. Дождитесь трёх зелёных индикаторов и надписи **«Готов к печати»**.
+6. Печатайте через Ctrl+P, принтер **Canon LBP1120 (CAPT)**. Окно сервера при этом должно быть открыто.
+
+Сервер слушает порт 9100. Кнопка «Тестовая страница» печатает встроенный пример напрямую на USB.
+
+## Что в репозитории
+
+| Папка | Содержимое |
+| --- | --- |
+| `captwin` | сервер печати `captwin` |
+| `installer` | окно, мастер настройки, скрипт Inno Setup |
+| `libcapt` | реализация протокола CAPT |
+| `third_party/ghostscript` | Ghostscript, который попадает в установщик |
+| `tools/zadig` | Zadig для установки WinUSB |
+| `release` | распакованный комплект рабочей сборки |
+
+## Сборка
+
+Нужны MinGW в `C:\mingw64` и Inno Setup 6. Архивы компилятора в репозиторий не входят.
 
 ```text
 .\pack-release.ps1
 ISCC installer\CaptWinSetup.iss
 ```
 
-Результат: `dist\Canon-LBP1120-CAPT-Setup.exe`.
-
-Компилятор и CMake в архив не входят: `tools\winlibs.zip` и `tools\cmake.zip` слишком большие для GitHub. Поставьте MinGW и CMake сами.
+Готовый файл: `dist\Canon-LBP1120-CAPT-Setup.exe`.
 
 ## Лицензии
 
-Смотрите `release\LICENSES.txt` и лицензии Ghostscript, Zadig, libusb. Это сторонняя сборка, не продукт Canon.
+Сторонние компоненты перечислены в `release\LICENSES.txt`: Ghostscript, Zadig, libusb и остальные. Сборка распространяется отдельно от драйверов Canon.
