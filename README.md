@@ -47,9 +47,11 @@ ISCC installer\CaptWinSetup.iss
 
 Чужие части остаются под своими лицензиями, список в `release\LICENSES.txt`: libcapt и captppd (BSD 2-Clause), libusb (LGPL-2.1), Zadig (GPL-3), Ghostscript (AGPL-3). Сборка не является драйвером Canon.
 
-## Если искали драйвер
+## Теги
 
-Эту страницу находят по запросам: драйвер Canon LBP-1120 Windows 10 64 bit, драйвер Canon LBP-1120 Windows 11 x64, Canon Laser Shot LBP1120 нет драйвера, CAPT driver LBP-1120 Windows 10 x64. Официального драйвера Canon под 64-битную Windows нет. Здесь рабочая замена: установщик, WinUSB и печать через Ctrl+P. Проверено на Windows 10 x64 и Windows 11 x64.
+`Canon LBP-1120` `LBP1120` `Laser Shot` `Windows 10 64 bit` `Windows 11 x64` `CAPT` `WinUSB` `драйвер`
+
+Официального драйвера Canon под 64-битную Windows нет. Здесь рабочая замена: установщик, WinUSB и печать через Ctrl+P. Проверено на Windows 10 x64 и Windows 11 x64.
 
 ## Контакт
 
