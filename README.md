@@ -4,7 +4,7 @@
 
 Официального драйвера CAPT под Windows x64 нет. Эта сборка ставит свой сервер печати: принтер один раз переводится на WinUSB, дальше документы уходят через обычный Ctrl+P.
 
-Проверено на Windows 10 x64, USB `04A9:262B`. Это не продукт Canon.
+Проверено на Windows 10 x64 и Windows 11 x64, USB `04A9:262B`. Это не продукт Canon.
 
 **Установщик 1.1.22:** [скачать](https://github.com/Musyaw/Canon-LBP1120-Win10-x64/releases/tag/v1.1.22)
 
@@ -41,6 +41,8 @@ ISCC installer\CaptWinSetup.iss
 
 Готовый файл: `dist\Canon-LBP1120-CAPT-Setup.exe`.
 
-## Лицензии
+## Лицензия
 
-Сторонние компоненты перечислены в `release\LICENSES.txt`: Ghostscript, Zadig, libusb и остальные. Сборка распространяется отдельно от драйверов Canon.
+Свой код (captwin, установщик, скрипты настройки) — [MIT](LICENSE).
+
+Чужие части остаются под своими лицензиями, список в `release\LICENSES.txt`: libcapt и captppd (BSD 2-Clause), libusb (LGPL-2.1), Zadig (GPL-3), Ghostscript (AGPL-3). Сборка не является драйвером Canon.
