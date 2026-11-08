@@ -1,0 +1,9 @@
+build/
+dist/
+tools/winlibs_extract/
+tools/cmake/
+tools/cache/
+tools/winlibs.zip
+tools/cmake.zip
+*.user
+.vs/

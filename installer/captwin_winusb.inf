@@ -1,0 +1,33 @@
+; Canon LBP1120 CAPT — WinUSB (unsigned; Windows may ask for confirmation)
+; Replace usbprint with WinUSB so captwin can access the printer.
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = USBDevice
+ClassGuid   = {88bae032-5a81-49f0-bc3d-a4ff138216d6}
+Provider    = %ManufacturerName%
+DriverVer   = 11/01/2026,1.0.0.0
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTamd64
+
+[Standard.NTamd64]
+%DeviceName% = USB_Install, USB\VID_04A9&PID_262B
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include = winusb.inf
+Needs   = WINUSB.NT.Services
+
+[USB_Install.HW]
+AddReg = Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{7CEF4973-1B10-4B8D-A5ED-060A41E1F104}"
+
+[Strings]
+ManufacturerName = "CAPT LBP1120 Community"
+DeviceName       = "Canon LBP1120 CAPT USB (WinUSB)"
