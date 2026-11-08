@@ -1,0 +1,9 @@
+Third-party components used in captwin (Canon LBP-1120 Windows port)
+
+libcapt — BSD 2-Clause — https://github.com/darkvision77/libcapt
+captppd (USB backend portions) — BSD 2-Clause — https://github.com/darkvision77/captppd
+libusb 1.0.27 — LGPL-2.1 — https://github.com/libusb/libusb
+Zadig 2.9 — GPL-3 — https://github.com/pbatard/libwdi
+
+Canon CAPT protocol reverse engineering is community work; this package is not
+endorsed by Canon Inc.
