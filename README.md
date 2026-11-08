@@ -51,7 +51,7 @@ ISCC installer\CaptWinSetup.iss
 
 `Canon LBP-1120` `LBP1120` `Laser Shot` `Windows 10 64 bit` `Windows 11 x64` `CAPT` `WinUSB` `драйвер`
 
-Официального драйвера Canon под 64-битную Windows нет. Здесь рабочая замена: установщик, WinUSB и печать через Ctrl+P. Проверено на Windows 10 x64 и Windows 11 x64.
+Официального драйвера Canon под 64-битную Windows нет. Здесь рабочая замена: установщик, WinUSB и печать через Ctrl+P.
 
 ## Контакт
 
